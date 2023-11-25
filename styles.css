@@ -1,0 +1,546 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500&family=Poppins:wght@400;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins';
+    color:  black;
+
+}
+.contact-h1 {
+    text-align: center;
+    font-size: 5rem;
+}
+:root {
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+}
+html {
+    
+    font-size: 62.5%;
+    overflow-y: scroll;
+}
+html::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.header {
+    /*The position is fixed so if we scroll down to the bottom, the header tag won't disappear*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*The padding of "2rem" symbolize the padding for the top of and bottom padding (in which if will give a few spaces from the top) , and the "9% meaning for the left and right padding (Making the header won't be near the edgest of the left and right page) */
+    padding: 2rem 9%;
+    /*The background will be transparent/there's nothing for the background*/
+    background: #E4D3D3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.25);
+    /*The display is set to flex so the logo and the navbar is in the same line with each other (remember, there is only 2 tags inside the header tag (the logo and the navbar tag) )*/
+    display: flex;
+    /*Giving it a space-between will make it very separate with each other*/
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.header >  h2 {
+    font-size: 4.5rem;
+    color: black;
+}
+.header  > div > nav > a {
+    font-size: 2.2rem;
+    margin-left: 2.5rem;
+    color :black;
+    font-weight: 500;
+    transition: .15s ease;
+    margin-right: 2.5rem;
+}
+.header-links {
+    display: flex;
+    align-items: center;
+}
+.header-links .nav a {
+    position: relative;
+}
+.header-links .nav a:hover {
+    color: white;
+}
+.header-links .nav a.activate {
+    color: white;
+}
+
+.header-links .nav a::before{
+    background-color: white;
+    position: absolute;
+}
+.hire {
+    width: 16rem;
+    height: 4.5rem;
+    color: black;
+    font-size: 2.2rem;
+    font-weight: 500;
+    border-radius: 20px;
+    background-color: #ebb7b7;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.15);
+    transition: all .3s;
+    margin-left: 10rem ;
+    cursor: pointer;
+}
+.hire:hover {
+    
+    background-color: #e8baba;
+}
+section {
+    /*This will set the width and height to be a full-screen 'AND'... it gives spaces, just delete the min-height or change it a little an you know*/
+    min-height: 100vh;
+    
+    background: #E7DDDD;
+    padding: 10rem 9% 2rem;
+}
+
+.home {
+    /*I use the flex display so the home section will be in the center, since teh align-items is for the 'y' axis, not the 'x' axis.*/
+    
+    /*This css function makes that it so that the home section won't be clutter on the top*/
+    padding: 15% 5%;
+    
+}
+
+.home-content {
+    /*This will only make the max-width become 60rem, or should i say it is just to contain the home content by a certain amount of width*/
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.home-content h1 {
+    font-size: 6.6rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+.home-content h3 {
+    font-size: 6.7rem;
+    font-weight: 600;
+    
+    /*This is how to call a stroke with css*/
+    
+}
+.home-content p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 2.5rem;
+    max-width: 65rem;
+    margin-bottom: 1.5rem;
+}
+.text-home-content {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.home-buttons-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 60rem;
+    height: 6rem;
+}
+
+.home-buttons-content .home-buttons {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    height: 6rem;
+    background: #eeb0b0;
+    border: .2rem solid #e8baba;;
+    border-radius: 30px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--bg-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-buttons-content .home-buttons:hover {
+    color: white;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.15);
+    
+}
+.home-buttons-content .home-buttons:nth-child(2) {
+    background: transparent;
+    color: black;
+    
+}
+
+.home-buttons-content .home-buttons:nth-child(2):hover {
+    color: white;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.15);
+}
+.home-buttons-content .home-buttons:nth-child(2)::before {
+    background: #e8baba;
+}
+
+.home-buttons-content .home-buttons::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #e8baba;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-buttons-content .home-buttons:hover::before {
+    
+    width: 100%;
+}
+.home-content img {
+    margin: 0;
+    padding: 0;
+    height: 320px;
+}
+.menu-icon {
+    display: none;
+}
+.about {
+    padding: 12rem 9%;
+    
+}
+.about .aboutHeader {
+    font-size: 3rem;
+    text-align: center;
+}
+.aboutContent {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+}
+.about-Image {
+    width: 300px;
+    margin-top: 10vh;
+}
+.aboutMeParagraph {
+    width: 600px;
+    margin-left: 5rem;
+    font-size: 2.4rem;
+    
+}
+.textAboutMe {
+    align-self: center;
+}
+.aboutMecenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.service {
+    padding: 12rem 9%;
+}
+.serviceHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.serviceHeader h1 {
+    font-size: 5rem;
+}
+.serviceHeader p {
+    font-weight: 300;
+    text-align: center;
+    width: 627px;
+    font-size: 2.1rem;
+}
+.rectangle {
+    width: 409px;
+    height: 507px;
+    background-color: #E7DDDD;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    transition: .5s ease;
+
+}
+.rectangle:hover {
+    background-color: #f3e4e4;
+}
+.imagehome-about {
+    position: absolute;
+    top: 700px  ;
+    right: 0;
+}
+.photo-home {
+    position: absolute;
+    top:30px;
+    right:0;
+}
+.photo3-service {
+    position: absolute;
+    top: 1800px;
+    left: 0;
+}
+.photo2-home {
+    position: absolute;
+    top:30px;
+    left:0;
+}
+.rectangle img {
+    margin-top: 5rem;
+}
+.rectangleContent {
+    
+
+    text-align: center;
+    
+    width: 80%;
+    margin-top: 3.2rem;
+    
+}
+.rectangleContent p {
+    font-size: 1.8rem;
+}
+.service-Button {
+    width: 100%;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #fffFFF;
+    margin-top:13rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.service-Button img {
+    margin: 0;
+    padding: 0;
+    
+}
+.rectangle:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 5px (0,0,0, 0.50);
+}
+.service-Button:hover {
+    opacity: 0.8; 
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.15);  
+}
+.rectangles {
+
+    display: flex;
+    flex: row;      
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+.two{
+    background-color: #FB8989;
+    color: white;
+}
+.two p {
+    color: white;
+}
+.rectangleContent h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2.2rem;
+}
+.two:hover {
+    transform: scale(1.12);
+    background-color: #f57373;
+}   
+.project {
+    padding: 14rem 15%;
+
+}
+.content-2 h2 {
+    color: white;
+}
+.projectHeader {
+    font-size: 2.2rem;
+    text-align: center;
+}
+.projectHeader p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.projectRectangle {
+    width: 340px;
+    height: 220px;
+    background-color: #AE7575;
+    border-radius: 30px;
+    transition: .5s ease;
+}
+.projectRectangle img {
+    width: 340px;
+    height: 220px;
+    
+    object-fit: cover;
+    border-radius: 30px;
+    transition: .5s ease;
+}
+.rectanglesProject {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.projectRectangle:hover {
+    transform: scale(1.1);
+    background-color: #845d5d;
+}
+
+.tools {
+    padding: 12rem 9%;
+    min-height: 80vh;
+}
+.toolsText {
+    text-align: center;
+    font-size: 2.5rem;
+}
+.toolsText p {
+    font-family: 'Plus Jakarta Sans';
+    width: 500px;
+}
+.toolsContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center ;
+}
+.contact {
+    padding: 12rem 9% 5rem 9%;
+}
+.contact-Contents {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form {
+    width: 90%;
+    max-width: 600px;
+}
+.input-group {
+    margin-bottom: 30px;
+    position: relative;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #AE7575;
+    color: #AE7575;
+    background: transparent;
+    font-size: 2rem;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+label {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: #AE7575;
+    cursor: text;
+    font-size: 1.8rem;
+    transition: 0.2s;
+}
+.button-submit {
+    padding: 1rem 0;
+    color: #AE7575;
+    outline: none;
+    background: transparent;
+    border: 1px solid #AE7575;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.8rem;
+    border-radius: 10px;
+}
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+    top: -42px;
+    font-size: 1.8rem;
+    margin-left: -10px;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+.row .input-group {
+    flex-basis: 48%;
+}
+.fa-solid {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+@media (max-width:1400px) {
+    .home-content {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .home {
+        justify-content: center;
+    }
+    .home-content {
+        text-align: center;
+    }
+    .home-buttons-content  {
+        margin-top: 2rem;
+        width: 68rem;
+    }
+    .text-home-content {
+        align-self: center;
+    }
+    .home-buttons-content {
+        width: 80%;
+        align-self: center;
+    }
+    .header  > div > nav > a {
+        font-size: 1.6rem;
+        margin-left: 1.1rem;
+        color :black;
+        font-weight: 500;
+        transition: .15s ease;
+        margin-right: 1.1rem;
+    }
+    .hire {
+        width: 12rem;
+        height: 3.8rem;
+        color: black;
+        font-size: 1.6rem;
+        font-weight: 500;
+        border-radius: 20px;
+        background-color: #ebb7b7;
+        box-shadow: 0px 0px 4px rgba(0,0,0,0.15);
+        transition: all .3s;
+        margin-left: 5rem ;
+    }
+}
